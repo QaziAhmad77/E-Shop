@@ -23,7 +23,6 @@ router.post("/create-shop", catchAsyncErrors(async (req, res, next) => {
       folder: "avatars",
     });
 
-
     const seller = {
       name: req.body.name,
       email: email,

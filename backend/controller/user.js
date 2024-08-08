@@ -65,11 +65,9 @@ router.post("/create-user", async (req, res, next) => {
         message: `please check your email:- ${user.email} to activate your account!`,
       });
     } catch (error) {
-      console.log(error.message, "1")
       return next(new ErrorHandler(error.message, 500));
     }
   } catch (error) {
-    console.log(error.message, "2")
     return next(new ErrorHandler(error.message, 400));
   }
 });
